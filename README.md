@@ -6,6 +6,9 @@ To use samoom, simply install the required libraries, download the script and ru
 `Please note that this script is intended for educational and research purposes only and should not be used for illegal activities.`
 # Usage
 ```
+```
+git clone 
+```
 1. pip install -r requirements.txt
 2. Run the script with python3 samoom.py
 ```
