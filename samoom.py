@@ -115,8 +115,9 @@ def search_subdomains(main_domain):
 #
 def scan_ports():
     host = input("Enter the host IP to scan: ")
+    common_ports = "21,22,25,80,443,3306,3389"
     nm = nmap.PortScanner()
-    nm.scan(host, '0-65535')
+    nm.scan(host, f'-p {common_ports} -F -T4')
     open_ports = []
     for port in nm[host]['tcp']:
         if nm[host]['tcp'][port]['state'] == 'open':
@@ -124,14 +125,16 @@ def scan_ports():
     if open_ports:
         print("\nAll ports listed below are open:")
         table = PrettyTable()
-        table.field_names = ["Port", "Service", "Version"]
+        table.field_names = ["Port", "Status", "Service","Version"]
         for port in open_ports:
+            state = nm[host]['tcp'][port]['state']
             service = nm[host]['tcp'][port]['name']
             version = nm[host]['tcp'][port]['version']
-            table.add_row([port, service, version])
+            table.add_row([port, state, service, version])
         print(table)
     else:
         print("No open ports found.")
+
 
 
 # #
