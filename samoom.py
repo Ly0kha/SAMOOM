@@ -115,9 +115,9 @@ def search_subdomains(main_domain):
 #
 def scan_ports():
     host = input("Enter the host IP to scan: ")
-    common_ports = "21,22,25,80,443,3306,3389"
+    common_ports = "20,21,22,25,53,80,137,139,443,1433,1434,3306,3389,8080,8443,5431"
     nm = nmap.PortScanner()
-    nm.scan(host, f'-p {common_ports} -F -T4')
+    nm.scan(host, f'{common_ports}')
     open_ports = []
     for port in nm[host]['tcp']:
         if nm[host]['tcp'][port]['state'] == 'open':
