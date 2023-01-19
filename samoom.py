@@ -135,8 +135,14 @@ def scan_ports():
     else:
         print("No open ports found.")
 
-
-
+def reverse_lookup():
+    host = input("Enter the host IP/domain to perform reverse lookup on: ")
+    url = f"https://api.hackertarget.com/reverseiplookup/?q={host}"
+    try:
+        response = requests.get(url)
+        print(colored(response.text, 'white'))
+    except Exception as e:
+        print(colored(f"Error: {e}", 'red'))
 # #
 def main():
     while True:
@@ -149,7 +155,8 @@ def main():
             print(Fore.GREEN + "3- Website technologies Scanning" + Style.RESET_ALL)
             print(Fore.GREEN + "4- Search for Subdomains" + Style.RESET_ALL)
             print(Fore.GREEN + "5- WHOIS Lookup" + Style.RESET_ALL)
-            print(Fore.RED + "6- Exit" + Style.RESET_ALL)
+            print(Fore.GREEN + "6- Reverslookup hosts" + Style.RESET_ALL)
+            print(Fore.RED + "7- Exit" + Style.RESET_ALL)
             choice = input()
             if choice == "1":
                 scan_ports()
@@ -164,6 +171,8 @@ def main():
                 domain = input("Enter the domain for WHOIS lookup: ")
                 whois_whois(domain)
             elif choice == "6":
+                reverse_lookup()
+            elif choice == "7":
                 break
             else:
                 print(Fore.RED + "Invalid choice. Please try again." + Style.RESET_ALL)
