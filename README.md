@@ -1,4 +1,4 @@
-# SAMOOM v0.2.1
+# SAMOOM v0.3.0
 The SAMOOM script is a comprehensive network reconnaissance tool that provides a range of functionalities for information gathering and vulnerability identification. Its features include:
 ```
       [1]-- Port Scanning
