@@ -1,12 +1,16 @@
 # SAMOOM v0.2
 The SAMOOM script is a comprehensive network reconnaissance tool that provides a range of functionalities for information gathering and vulnerability identification. Its features include:
-
-    1.Host discovery
-    2.Website technologies identification
-    3.Dork creation
-    4.Port scanning
-The latest version of the script, v0.2, includes a new feature:
-reverse IP lookup. This feature allows for the identification of all websites hosted on a specific IP or domain.
+```
+      [1]-- Port Scanning
+      [2]-- Live Hosts Scanning
+      [3]-- Website technologies Scanning
+      [4]-- Search for Subdomains
+      [5]-- WHOIS Lookup
+      [6]-- Reverslookup Hosts
+      [7]-- DNS Enumeration
+      ```
+The latest version of the script, v0.3, includes a new feature:
+DNS Enumeration. This feature allows for the gathering information about a domain's DNS records using dnsenum.
 
 To use samoom, simply install the required libraries, download the script and run it with python. Then follow the prompts to select the task you want to perform.
 
