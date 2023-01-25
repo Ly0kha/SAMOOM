@@ -14,6 +14,7 @@ The SAMOOM script is a comprehensive network reconnaissance tool that provides a
 
 # installation
 ```
+This installation is for Debian-based distributions only.
 1-git clone https://github.com/Ly0kha/SAMOOM.git
 2-chmod +x install.sh
 3-./install.sh
