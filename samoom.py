@@ -26,7 +26,6 @@ def print_logo():
                 |  $$$$$$/| $$  | $$| $$ \/  | $$|  $$$$$$/|  $$$$$$/| $$ \/  | $$
                  \______/ |__/  |__/|__/     |__/ \______/  \______/ |__/     |__/
 
-                  SAMOM - Simple Automated Multi-purpose Offensive Manager 
 
                                     Coded By @Ly0kha                                                
 """
